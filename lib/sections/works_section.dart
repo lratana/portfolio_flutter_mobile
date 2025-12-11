@@ -1,16 +1,15 @@
 // Works Section
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import '../providers/portfolio_provider.dart';
 import '../models/portfolio_models.dart';
 
 class WorksSection extends StatelessWidget {
   final Works works;
-  final Function(String) onDelete;
 
   const WorksSection({
     super.key,
     required this.works,
-    required this.onDelete,
   });
 
   @override
@@ -68,7 +67,11 @@ class WorksSection extends StatelessWidget {
                         ),
                         IconButton(
                           icon: const Icon(Icons.delete),
-                          onPressed: () => onDelete(work.id),
+                          onPressed: () {
+                            Provider.of<PortfolioProvider>(context,
+                                    listen: false)
+                                .deleteWorkItem(work.id);
+                          },
                         ),
                       ],
                     ),

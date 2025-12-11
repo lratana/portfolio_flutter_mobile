@@ -1,18 +1,15 @@
 // Experience Section
 import 'package:flutter/material.dart';
-
+import 'package:provider/provider.dart';
+import '../providers/portfolio_provider.dart';
 import '../models/portfolio_models.dart';
 
 class ExperienceSection extends StatelessWidget {
   final Experience experience;
-  final Function(int, ExperienceItem) onUpdate;
-  final Function(int) onDelete;
 
   const ExperienceSection({
     super.key,
     required this.experience,
-    required this.onUpdate,
-    required this.onDelete,
   });
 
   @override
@@ -83,7 +80,11 @@ class ExperienceSection extends StatelessWidget {
                             ),
                             PopupMenuItem(
                               child: const Text('Delete'),
-                              onTap: () => onDelete(index),
+                              onTap: () {
+                                Provider.of<PortfolioProvider>(context,
+                                        listen: false)
+                                    .deleteExperienceItem(index);
+                              },
                             ),
                           ],
                         ),
@@ -161,7 +162,9 @@ class ExperienceSection extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              onUpdate(
+              final provider =
+                  Provider.of<PortfolioProvider>(context, listen: false);
+              provider.updateExperienceItem(
                 index,
                 ExperienceItem(
                   company: companyController.text,
