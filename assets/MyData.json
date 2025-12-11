@@ -1,0 +1,316 @@
+{
+  "site": {
+    "brand": {
+      "name": "LONG RATANA",
+      "logo": "/images/logo.svg"
+    },
+    "navigation": [
+      { "label": "Skills", "to": "#skills" },
+      { "label": "Works", "to": "#works" },
+      { "label": "Education", "to": "#education" },
+      { "label": "Experience", "to": "#experience" }
+    ],
+    "contact": {
+      "email": "lratana85@gmail.com",
+      "phone": "(+855) 96 72 75 814",
+      "location": "Svay Rieng, Cambodia",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/long-ratana",
+        "twitter": "https://twitter.com/longratana",
+        "dribbble": "https://dribbble.com/longratana",
+        "behance": "https://www.behance.net/longratana",
+        "github": "https://github.com/longratana"
+      }
+    }
+  },
+  "hero": {
+    "greeting": "Hey There, I'm",
+    "name": "LONG RATANA",
+    "tagline": "Full-stack developer building innovative web and mobile solutions.",
+    "bio": "Computer Science graduate specializing in Vue.js, Flutter, and Node.js development with experience in government and enterprise projects.",
+    "avatar": "/images/profile.png",
+    "email": "lratana85@gmail.com",
+    "yearsExperience": 4,
+    "certification": {
+      "title": "Bachelor Degree in Computer Science",
+      "badge": "/images/badges/degree.svg"
+    },
+    "stats": [
+      { "label": "Years Experience", "value": 4, "suffix": "+" },
+      { "label": "Projects Completed", "value": 15, "suffix": "+" }
+    ],
+    "background": {
+      "artwork": "/images/hero-art.png"
+    },
+    "personalData": {
+      "sex": "Male",
+      "dateOfBirth": "15th May 1998",
+      "nationality": "Cambodian",
+      "address": "Bong Veng Village, Svay Chrum Commune, Svay Chrum District, Svay Rieng Province"
+    }
+  },
+  "services": {
+    "title": "Technical Skills",
+    "items": [
+      {
+        "id": "web-development",
+        "title": "Web Development",
+        "description": "HTML, CSS, Bootstrap, Vue.js, JavaScript, jQuery, Node.js",
+        "projects": 8,
+        "icon": "website"
+      },
+      {
+        "id": "mobile-development",
+        "title": "Mobile Development",
+        "description": "Flutter framework for cross-platform mobile applications",
+        "projects": 5,
+        "icon": "mobile"
+      },
+      {
+        "id": "database-programming",
+        "title": "Database & Programming",
+        "description": "MySQL, SQL Server, C#, VB.NET, Java",
+        "projects": 12,
+        "icon": "brand"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Computer Skills",
+    "categories": [
+      {
+        "name": "Microsoft Office",
+        "skills": ["Word", "Excel", "PowerPoint", "Access"]
+      },
+      {
+        "name": "Web Design",
+        "skills": ["HTML", "CSS", "Bootstrap"]
+      },
+      {
+        "name": "Database",
+        "skills": ["MySQL", "SQL Server"]
+      },
+      {
+        "name": "Framework",
+        "skills": ["Flutter", "Vue.js"]
+      },
+      {
+        "name": "Front-end",
+        "skills": ["JavaScript", "jQuery"]
+      },
+      {
+        "name": "Back-end",
+        "skills": ["Node.js"]
+      },
+      {
+        "name": "Programming",
+        "skills": ["C#", "VB.NET", "Java"]
+      }
+    ],
+    "languages": {
+      "khmer": "Excellent",
+      "english": "Good"
+    }
+  },
+  "education": {
+    "title": "Education & Training",
+    "timeline": [
+      {
+        "year": "2021",
+        "institution": "Professional Training",
+        "degree": "Advanced Microsoft Excel Course",
+        "description": "Completed advanced training in Excel for data analysis and automation"
+      },
+      {
+        "year": "2018",
+        "institution": "RPIT",
+        "degree": "Computer Graphic Design",
+        "description": "Completed professional training in graphic design"
+      },
+      {
+        "year": "2017 - 2021",
+        "institution": "Svay Rieng University",
+        "degree": "Bachelor Degree in Computer Science",
+        "description": "Graduated with comprehensive knowledge in software development, algorithms, and systems"
+      },
+      {
+        "year": "2014 - 2017",
+        "institution": "Hun Sen Svay Chrum High School",
+        "degree": "High School Diploma",
+        "description": "Completed secondary education"
+      },
+      {
+        "year": "2011 - 2014",
+        "institution": "Hun Sen Svay Chrum Secondary School",
+        "degree": "Secondary School Certificate",
+        "description": "Completed basic education"
+      }
+    ]
+  },
+  "experience": {
+    "title": "My Work Experience",
+    "timeline": [
+      {
+        "company": "Ministry of Health",
+        "location": "Cambodia",
+        "period": "2022 – Present",
+        "roles": [
+          {
+            "title": "Software Developer",
+            "summary": "Developing and maintaining health information systems for national deployment.",
+            "highlights": [
+              "Built responsive web applications using Vue.js and Bootstrap",
+              "Designed and optimized databases with MySQL",
+              "Collaborated with healthcare teams to deliver user-centric solutions"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Ecoinsoft Company CO.,Ltd",
+        "location": "Cambodia",
+        "period": "2021 – 2022",
+        "roles": [
+          {
+            "title": "Full-stack Developer",
+            "summary": "Developed enterprise software solutions with modern web technologies.",
+            "highlights": [
+              "Implemented front-end features using JavaScript and jQuery",
+              "Built REST APIs with Node.js",
+              "Worked with C# and VB.NET for desktop applications"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "PT Prak Chantoeun CO.,Ltd",
+        "location": "Cambodia",
+        "period": "2021",
+        "roles": [
+          {
+            "title": "Junior Developer",
+            "summary": "Started professional career building business applications.",
+            "highlights": [
+              "Developed web interfaces with HTML, CSS, and Bootstrap",
+              "Managed databases and performed data analysis"
+            ]
+          }
+        ]
+      },
+      {
+        "company": "Svay Rieng University",
+        "location": "Svay Rieng",
+        "period": "2017 – 2021",
+        "roles": [
+          {
+            "title": "Volunteer",
+            "summary": "Supported academic and technical activities while pursuing degree.",
+            "highlights": [
+              "Assisted with computer lab management",
+              "Helped students with programming assignments"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "works": {
+    "title": "My Latest Works",
+    "note": "Recent projects and achievements",
+    "items": [
+      {
+        "id": "health-system",
+        "title": "Health Information System",
+        "subtitle": "Ministry of Health",
+        "cover": "/images/works/health-system.png",
+        "grid": "wide",
+        "tags": ["Vue.js", "MySQL", "Bootstrap"],
+        "url": "#",
+        "caseStudy": "#"
+      },
+      {
+        "id": "enterprise-app",
+        "title": "Enterprise Application",
+        "subtitle": "Ecoinsoft Company",
+        "cover": "/images/works/enterprise.png",
+        "grid": "standard",
+        "tags": ["Node.js", "C#", "Database"],
+        "url": "#",
+        "caseStudy": "#"
+      },
+      {
+        "id": "mobile-app",
+        "title": "Mobile Application",
+        "subtitle": "Flutter Project",
+        "cover": "/images/works/mobile.png",
+        "grid": "standard",
+        "tags": ["Flutter", "Mobile"],
+        "url": "#",
+        "caseStudy": "#"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Professional Profile",
+    "items": [
+      {
+        "name": "Technical Excellence",
+        "role": "Full-stack Development",
+        "company": "Web & Mobile",
+        "avatar": "/images/people/tech.png",
+        "quote": "Proficient in modern frameworks like Vue.js and Flutter with strong database design skills."
+      },
+      {
+        "name": "Government Projects",
+        "role": "Healthcare IT",
+        "company": "Ministry of Health",
+        "avatar": "/images/people/gov.png",
+        "quote": "Contributing to national health information systems serving millions of citizens."
+      },
+      {
+        "name": "Continuous Learning",
+        "role": "Professional Development",
+        "company": "Self-improvement",
+        "avatar": "/images/people/learn.png",
+        "quote": "Constantly updating skills through courses and hands-on projects in latest technologies."
+      }
+    ]
+  },
+  "hobbies": {
+    "title": "Hobbies & Interests",
+    "list": [
+      "Reading technical books and documentation",
+      "Working collaboratively in team environments",
+      "Playing sports and staying active",
+      "Watching educational content and tech videos",
+      "Listening to music while coding",
+      "Traveling and exploring new places"
+    ]
+  },
+  "cta": {
+    "heading": "Let's work together on your next project.",
+    "subheading": "Start by",
+    "primary": {
+      "label": "getting in touch",
+      "href": "mailto:lratana85@gmail.com"
+    }
+  },
+  "footer": {
+    "address": {
+      "line1": "Bong Veng Village, Svay Chrum, Svay Rieng, Cambodia"
+    },
+    "quickLinks": [
+      { "label": "Skills", "to": "#skills" },
+      { "label": "Works", "to": "#works" },
+      { "label": "Education", "to": "#education" },
+      { "label": "Experience", "to": "#experience" }
+    ],
+    "copyright": "© 2025 LONG RATANA. All Rights Reserved",
+    "credits": "Built with Vue.js & Tailwind CSS"
+  },
+  "seo": {
+    "title": "LONG RATANA – Full-stack Developer",
+    "description": "Portfolio of Long Ratana, full-stack developer specializing in Vue.js, Flutter, and Node.js with experience in government and enterprise projects.",
+    "image": "/images/og-image.png"
+  }
+}
