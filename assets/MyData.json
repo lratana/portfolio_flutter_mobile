@@ -2,7 +2,7 @@
   "site": {
     "brand": {
       "name": "LONG RATANA",
-      "logo": "/images/logo.svg"
+      "logo": "/images/Logo.svg"
     },
     "navigation": [
       { "label": "Skills", "to": "#skills" },
@@ -28,7 +28,7 @@
     "name": "LONG RATANA",
     "tagline": "Full-stack developer building innovative web and mobile solutions.",
     "bio": "Computer Science graduate specializing in Vue.js, Flutter, and Node.js development with experience in government and enterprise projects.",
-    "avatar": "/images/profile.png",
+    "avatar": "/images/Ratana.png",
     "email": "lratana85@gmail.com",
     "yearsExperience": 4,
     "certification": {
