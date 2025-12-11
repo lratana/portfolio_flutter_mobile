@@ -1,53 +1,72 @@
-// Portfolio Provider - State management with ChangeNotifier
-import 'package:flutter/foundation.dart';
+// Portfolio Provider - State management with Riverpod
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/portfolio_models.dart';
 import '../services/portfolio_service.dart';
 
-class PortfolioProvider extends ChangeNotifier {
+// Portfolio State class
+class PortfolioState {
+  final PortfolioData? data;
+  final bool isLoading;
+  final String? errorMessage;
+
+  const PortfolioState({
+    this.data,
+    this.isLoading = false,
+    this.errorMessage,
+  });
+
+  bool get hasData => data != null;
+  bool get hasError => errorMessage != null;
+
+  // Convenience getters for sections
+  PersonalProfile? get hero => data?.hero;
+  Services? get services => data?.services;
+  Skills? get skills => data?.skills;
+  Education? get education => data?.education;
+  Experience? get experience => data?.experience;
+  Works? get works => data?.works;
+  Testimonials? get testimonials => data?.testimonials;
+  Contact? get contact => data?.site.contact;
+  Brand? get brand => data?.site.brand;
+
+  PortfolioState copyWith({
+    PortfolioData? data,
+    bool? isLoading,
+    String? errorMessage,
+  }) {
+    return PortfolioState(
+      data: data ?? this.data,
+      isLoading: isLoading ?? this.isLoading,
+      errorMessage: errorMessage,
+    );
+  }
+}
+
+// Portfolio Notifier
+class PortfolioNotifier extends StateNotifier<PortfolioState> {
   final PortfolioService _service = PortfolioService();
 
-  PortfolioData? _portfolioData;
-  bool _isLoading = false;
-  String? _errorMessage;
-
-  // Getters
-  PortfolioData? get portfolioData => _portfolioData;
-  bool get isLoading => _isLoading;
-  String? get errorMessage => _errorMessage;
-  bool get hasData => _portfolioData != null;
-  bool get hasError => _errorMessage != null;
-
-  // Get specific sections
-  PersonalProfile? get hero => _portfolioData?.hero;
-  Services? get services => _portfolioData?.services;
-  Skills? get skills => _portfolioData?.skills;
-  Education? get education => _portfolioData?.education;
-  Experience? get experience => _portfolioData?.experience;
-  Works? get works => _portfolioData?.works;
-  Testimonials? get testimonials => _portfolioData?.testimonials;
-  Contact? get contact => _portfolioData?.site.contact;
-  Brand? get brand => _portfolioData?.site.brand;
+  PortfolioNotifier() : super(const PortfolioState()) {
+    loadPortfolioData();
+  }
 
   /// Load portfolio data from JSON
   Future<void> loadPortfolioData() async {
-    _isLoading = true;
-    _errorMessage = null;
-    notifyListeners();
+    state = state.copyWith(isLoading: true, errorMessage: null);
 
     try {
-      _portfolioData = await _service.loadJsonData();
-      _isLoading = false;
-      notifyListeners();
+      final data = await _service.loadJsonData();
+      state = PortfolioState(data: data, isLoading: false);
 
       // Listen to service stream for updates
       _service.dataStream.listen((updatedData) {
-        _portfolioData = updatedData;
-        notifyListeners();
+        state = PortfolioState(data: updatedData, isLoading: false);
       });
     } catch (e) {
-      _isLoading = false;
-      _errorMessage = 'Failed to load portfolio: $e';
-      notifyListeners();
+      state = PortfolioState(
+        isLoading: false,
+        errorMessage: 'Failed to load portfolio: $e',
+      );
     }
   }
 
@@ -118,3 +137,9 @@ class PortfolioProvider extends ChangeNotifier {
     super.dispose();
   }
 }
+
+// Portfolio Provider - Main provider for the app
+final portfolioProvider =
+    StateNotifierProvider<PortfolioNotifier, PortfolioState>(
+  (ref) => PortfolioNotifier(),
+);

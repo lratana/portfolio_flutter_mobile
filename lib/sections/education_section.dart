@@ -1,6 +1,6 @@
 // Education Section
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/portfolio_provider.dart';
 import '../models/portfolio_models.dart';
 
@@ -82,8 +82,10 @@ class EducationSection extends StatelessWidget {
                             PopupMenuItem(
                               child: const Text('Delete'),
                               onTap: () {
-                                Provider.of<PortfolioProvider>(context,
-                                        listen: false)
+                                final container =
+                                    ProviderScope.containerOf(context);
+                                container
+                                    .read(portfolioProvider.notifier)
                                     .deleteEducationItem(index);
                               },
                             ),
@@ -148,17 +150,16 @@ class EducationSection extends StatelessWidget {
           ),
           TextButton(
             onPressed: () {
-              final provider =
-                  Provider.of<PortfolioProvider>(context, listen: false);
-              provider.updateEducationItem(
-                index,
-                EducationItem(
-                  year: yearController.text,
-                  degree: degreeController.text,
-                  institution: institutionController.text,
-                  description: descriptionController.text,
-                ),
-              );
+              final container = ProviderScope.containerOf(context);
+              container.read(portfolioProvider.notifier).updateEducationItem(
+                    index,
+                    EducationItem(
+                      year: yearController.text,
+                      degree: degreeController.text,
+                      institution: institutionController.text,
+                      description: descriptionController.text,
+                    ),
+                  );
               Navigator.pop(context);
             },
             child: const Text('Save'),
