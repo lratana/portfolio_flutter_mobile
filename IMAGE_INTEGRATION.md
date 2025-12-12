@@ -1,14 +1,17 @@
 # Image Integration Guide
 
 ## Overview
+
 This document describes how images are integrated throughout the portfolio application to enhance visual appeal and user experience.
 
 ## Image Features Implemented
 
-### 1. **Hero Section - Profile Avatar** 
+### 1. **Hero Section - Profile Avatar**
+
 **File:** `lib/sections/hero_section.dart`
 
 #### Features:
+
 - ✅ Displays user profile image from `hero.avatar`
 - ✅ Fallback to initials if no image provided
 - ✅ Circular avatar with border and shadow
@@ -16,6 +19,7 @@ This document describes how images are integrated throughout the portfolio appli
 - ✅ Professional styling with box shadow
 
 #### Data Source:
+
 ```json
 "hero": {
   "avatar": "/images/Ratana.png",
@@ -25,22 +29,25 @@ This document describes how images are integrated throughout the portfolio appli
 ```
 
 #### Implementation:
+
 ```dart
 Widget _buildAvatar() {
   if (hero.avatar.isEmpty) {
     // Fallback to initials
     return CircleAvatar(radius: 50, ...);
   }
-  
+
   // Load image from assets
   return Image.asset('assets/images/Ratana.png', ...);
 }
 ```
 
 ### 2. **Works Section - Project Cover Images**
+
 **File:** `lib/sections/works_section.dart`
 
 #### Features:
+
 - ✅ Large cover images for each project
 - ✅ Images displayed at top of card
 - ✅ Professional card layout with elevation
@@ -48,6 +55,7 @@ Widget _buildAvatar() {
 - ✅ Graceful error handling with fallback message
 
 #### Data Source:
+
 ```json
 "works": {
   "items": [
@@ -72,6 +80,7 @@ Widget _buildAvatar() {
 ```
 
 #### Implementation:
+
 ```dart
 if (work.cover.isNotEmpty)
   Container(
@@ -82,6 +91,7 @@ if (work.cover.isNotEmpty)
 ```
 
 #### Error Handling:
+
 ```dart
 errorBuilder: (context, error, stackTrace) {
   return Container(
@@ -96,9 +106,11 @@ errorBuilder: (context, error, stackTrace) {
 ```
 
 ### 3. **Services Section - Service Icons**
+
 **File:** `lib/sections/service_section.dart`
 
 #### Features:
+
 - ✅ Icon display for each service
 - ✅ Icon styled in background container
 - ✅ Fallback to generic build icon
@@ -106,6 +118,7 @@ errorBuilder: (context, error, stackTrace) {
 - ✅ Professional icon sizing
 
 #### Data Source:
+
 ```json
 "services": {
   "items": [
@@ -132,6 +145,7 @@ errorBuilder: (context, error, stackTrace) {
 ```
 
 #### Implementation:
+
 ```dart
 Container(
   width: 50,
@@ -145,6 +159,7 @@ Container(
 ```
 
 #### SVG Handling:
+
 ```dart
 if (cleanPath.endsWith('.svg')) {
   // Fallback to generic icon for SVG
@@ -153,9 +168,11 @@ if (cleanPath.endsWith('.svg')) {
 ```
 
 ### 4. **Testimonials Section - Profile Avatars**
+
 **File:** `lib/sections/testimonials_section.dart`
 
 #### Features:
+
 - ✅ Avatar images for testimonial authors
 - ✅ Fallback to initials if no image
 - ✅ Circular avatar with subtle border
@@ -163,6 +180,7 @@ if (cleanPath.endsWith('.svg')) {
 - ✅ Professional styling
 
 #### Data Source:
+
 ```json
 "testimonials": {
   "items": [
@@ -178,6 +196,7 @@ if (cleanPath.endsWith('.svg')) {
 ```
 
 #### Implementation:
+
 ```dart
 Widget _buildAvatar(Testimonial testimonial) {
   if (testimonial.avatar.isEmpty) {
@@ -187,7 +206,7 @@ Widget _buildAvatar(Testimonial testimonial) {
       child: Text(testimonial.name[0]),
     );
   }
-  
+
   return Container(
     width: 50,
     height: 50,
@@ -231,8 +250,8 @@ All images use **asset-relative paths** starting with `/images/`:
 The code automatically handles path conversion:
 
 ```dart
-String cleanPath = imagePath.startsWith('/') 
-  ? imagePath.substring(1) 
+String cleanPath = imagePath.startsWith('/')
+  ? imagePath.substring(1)
   : imagePath;
 return Image.asset('assets/$cleanPath');
 ```
@@ -257,22 +276,26 @@ This ensures the app doesn't crash if an image file is missing.
 ## Optimization Tips
 
 ### 1. **Image Format Recommendations**
+
 - **PNG**: Best for logos, icons, and transparent images
 - **JPG**: Best for photos and complex images (smaller file size)
 - **SVG**: Best for scalable icons (handled as fallback)
 
 ### 2. **Image Sizing**
+
 - **Avatar images**: 100-200px
 - **Work covers**: 400-600px width recommended
 - **Icon images**: 50-100px
 - **Service icons**: 32-64px
 
 ### 3. **File Size**
+
 - Compress images before adding to assets
 - Use online tools like TinyPNG or ImageOptim
 - Recommended max size: 200KB per image
 
 ### 4. **Quality Balance**
+
 - Use 80% JPG quality for photos
 - Use full quality for logos and important visuals
 - Test on actual devices for display quality
@@ -280,34 +303,42 @@ This ensures the app doesn't crash if an image file is missing.
 ## Adding New Images
 
 ### Step 1: Prepare Image
+
 - Resize to appropriate dimensions
 - Compress the file
 - Save in correct format (PNG/JPG)
 
 ### Step 2: Add to Assets
+
 ```
 assets/images/my-new-image.png
 ```
 
 ### Step 3: Update JSON
+
 ```json
 "cover": "/images/my-new-image.png"
 ```
 
 ### Step 4: Verify in App
+
 The image should automatically display!
 
 ## Advanced Features
 
 ### 1. **Image Caching**
+
 Flutter automatically caches images in memory:
+
 ```dart
 Image.asset('assets/images/example.png')
 // Cached automatically
 ```
 
 ### 2. **Network Images (Future Enhancement)**
+
 To load from URLs instead:
+
 ```dart
 Image.network(
   'https://example.com/image.png',
@@ -318,6 +349,7 @@ Image.network(
 ```
 
 ### 3. **Image Placeholders**
+
 ```dart
 Image.asset(
   'assets/images/example.png',
@@ -331,11 +363,13 @@ Image.asset(
 
 **Problem:** "Image not found" error
 **Solution:**
+
 1. Verify image path is correct
 2. Check pubspec.yaml includes assets folder
 3. Run `flutter clean && flutter pub get`
 
 **Code Check:**
+
 ```yaml
 flutter:
   assets:
@@ -347,6 +381,7 @@ flutter:
 
 **Problem:** App is slow when loading images
 **Solution:**
+
 1. Compress images further
 2. Use smaller resolution images for thumbnails
 3. Implement lazy loading for lists
@@ -355,6 +390,7 @@ flutter:
 
 **Problem:** Images look pixelated
 **Solution:**
+
 1. Use higher resolution source images
 2. Ensure fit: BoxFit.cover is applied
 3. Check device pixel ratio
@@ -371,18 +407,19 @@ flutter:
 
 ## File Locations Reference
 
-| Feature | Image File | Widget | JSON Path |
-|---------|-----------|--------|-----------|
-| Hero Avatar | `Ratana.png` | `HeroSection` | `hero.avatar` |
-| Work 1 Cover | `works/health-system.png` | `WorksSection` | `works.items[0].cover` |
-| Work 2 Cover | `works/enterprise.png` | `WorksSection` | `works.items[1].cover` |
-| Work 3 Cover | `works/mobile.png` | `WorksSection` | `works.items[2].cover` |
-| Service Icons | `*.svg` | `ServicesSection` | `services.items[*].icon` |
-| Testimonial Avatar | `people/*.jpg` | `TestimonialsSection` | `testimonials.items[*].avatar` |
+| Feature            | Image File                | Widget                | JSON Path                      |
+| ------------------ | ------------------------- | --------------------- | ------------------------------ |
+| Hero Avatar        | `Ratana.png`              | `HeroSection`         | `hero.avatar`                  |
+| Work 1 Cover       | `works/health-system.png` | `WorksSection`        | `works.items[0].cover`         |
+| Work 2 Cover       | `works/enterprise.png`    | `WorksSection`        | `works.items[1].cover`         |
+| Work 3 Cover       | `works/mobile.png`        | `WorksSection`        | `works.items[2].cover`         |
+| Service Icons      | `*.svg`                   | `ServicesSection`     | `services.items[*].icon`       |
+| Testimonial Avatar | `people/*.jpg`            | `TestimonialsSection` | `testimonials.items[*].avatar` |
 
 ## Summary
 
 Images are now integrated throughout the portfolio with:
+
 - ✅ Professional visual presentation
 - ✅ Fallback mechanisms for missing images
 - ✅ Error handling and graceful degradation

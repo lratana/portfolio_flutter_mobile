@@ -109,7 +109,8 @@ class HeroSection extends StatelessWidget {
   /// Build image widget - handles asset paths
   Widget _buildImage(String imagePath) {
     // Remove leading slash if present
-    String cleanPath = imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
+    String cleanPath =
+        imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
 
     return Image.asset(
       'assets/$cleanPath',

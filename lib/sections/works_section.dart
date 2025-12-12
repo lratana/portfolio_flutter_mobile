@@ -123,8 +123,9 @@ class WorksSection extends StatelessWidget {
   /// Build image widget - handles asset paths
   Widget _buildImage(String imagePath) {
     // Remove leading slash if present
-    String cleanPath = imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
-    
+    String cleanPath =
+        imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
+
     return Image.asset(
       'assets/$cleanPath',
       fit: BoxFit.cover,
@@ -134,10 +135,8 @@ class WorksSection extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.image_not_supported, 
-                color: Colors.grey[600], 
-                size: 48
-              ),
+              Icon(Icons.image_not_supported,
+                  color: Colors.grey[600], size: 48),
               const SizedBox(height: 8),
               Text(
                 'Image not found',

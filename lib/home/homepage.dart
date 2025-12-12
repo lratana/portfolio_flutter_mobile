@@ -18,11 +18,11 @@ class PortfolioHomePage extends ConsumerWidget {
     final portfolioState = ref.watch(portfolioProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('My Portfolio'),
-        elevation: 0,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      //   title: const Text('My Portfolio'),
+      //   elevation: 0,
+      // ),
       body: _buildBody(context, ref, portfolioState),
     );
   }
@@ -70,19 +70,31 @@ class PortfolioHomePage extends ConsumerWidget {
     }
 
     // Success - Display portfolio content
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          HeroSection(hero: portfolioState.hero!),
-          ServicesSection(services: portfolioState.services!),
-          SkillsSection(skills: portfolioState.skills!),
-          EducationSection(education: portfolioState.education!),
-          ExperienceSection(experience: portfolioState.experience!),
-          WorksSection(works: portfolioState.works!),
-          TestimonialsSection(testimonials: portfolioState.testimonials!),
-          ContactSection(contact: portfolioState.contact!),
-        ],
-      ),
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          pinned: true,
+          expandedHeight: 500.0,
+          flexibleSpace: FlexibleSpaceBar(
+            //  title: Text(portfolioState.hero?.name ?? 'My Portfolio'),
+            background: HeroSection(hero: portfolioState.hero!),
+          ),
+        ),
+        SliverList(
+          delegate: SliverChildListDelegate(
+            [
+              //   HeroSection(hero: portfolioState.hero!),
+              ServicesSection(services: portfolioState.services!),
+              SkillsSection(skills: portfolioState.skills!),
+              EducationSection(education: portfolioState.education!),
+              ExperienceSection(experience: portfolioState.experience!),
+              WorksSection(works: portfolioState.works!),
+              TestimonialsSection(testimonials: portfolioState.testimonials!),
+              ContactSection(contact: portfolioState.contact!),
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

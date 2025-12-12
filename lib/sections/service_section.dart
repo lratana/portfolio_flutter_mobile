@@ -94,7 +94,8 @@ class ServicesSection extends StatelessWidget {
   /// Build icon from asset path
   Widget _buildIcon(String iconPath) {
     // Remove leading slash if present
-    String cleanPath = iconPath.startsWith('/') ? iconPath.substring(1) : iconPath;
+    String cleanPath =
+        iconPath.startsWith('/') ? iconPath.substring(1) : iconPath;
 
     // Check if it's an SVG or image
     if (cleanPath.endsWith('.svg')) {
