@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../models/portfolio_models.dart';
+import '../providers/locale_provider.dart' show AppLocalizations;
 
 class ServicesSection extends StatelessWidget {
   final Services services;
@@ -74,7 +75,7 @@ class ServicesSection extends StatelessWidget {
                       const SizedBox(height: 10),
                       // Projects count
                       Text(
-                        'Projects: ${service.projects}+',
+                        '${AppLocalizations.t(context, 'services.projectsCompleted')}: ${service.projects}+',
                         style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,

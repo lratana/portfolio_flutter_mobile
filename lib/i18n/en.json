@@ -1,0 +1,231 @@
+{
+  "name": "LONG RATANA",
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "works": "Works",
+    "education": "Education",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "common": {
+    "errorLoading": "Error loading portfolio",
+    "retry": "Retry",
+    "noData": "No portfolio data available",
+    "imageNotFound": "Image not found"
+  },
+  "hero": {
+    "greeting": "Hey There, I'm",
+    "tagline": "Computer Science Graduate",
+    "bio": "Specializing in Vue.js, Flutter, and Node.js development with experience in government and enterprise projects.",
+    "sayHello": "Say hello",
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projectsCompleted": "Projects Completed"
+    }
+  },
+  "services": {
+    "title": "Technical Skills",
+    "projectsCompleted": "Projects Completed",
+    "categories": {
+      "technicalExcellence": "Technical Excellence",
+      "fullStackDevelopment": "Full-stack Development",
+      "webMobile": "Web & Mobile"
+    }
+  },
+  "skills": {
+    "title": "Computer Skills",
+    "languages": "Languages",
+    "khmer": "Khmer",
+    "english": "English",
+    "excellent": "Excellent",
+    "good": "Good",
+    "categories": {
+      "microsoftOffice": "Microsoft Office",
+      "webDesign": "Web Design",
+      "database": "Database",
+      "framework": "Framework",
+      "frontEnd": "Front-end",
+      "backEnd": "Back-end",
+      "programming": "Programming"
+    },
+    "items": {
+      "word": "Word",
+      "excel": "Excel",
+      "powerpoint": "PowerPoint",
+      "access": "Access",
+      "html": "HTML",
+      "css": "CSS",
+      "bootstrap": "Bootstrap",
+      "mysql": "MySQL",
+      "sqlserver": "SQL Server",
+      "flutter": "Flutter",
+      "vuejs": "Vue.js",
+      "javascript": "JavaScript",
+      "jquery": "jQuery",
+      "nodejs": "Node.js",
+      "csharp": "C#",
+      "vbnet": "VB.NET",
+      "java": "Java"
+    }
+  },
+  "education": {
+    "title": "Education & Training",
+    "entries": {
+      "advancedExcel": {
+        "year": "2021",
+        "institution": "Professional Training",
+        "degree": "Advanced Microsoft Excel Course",
+        "description": "Completed advanced training in Excel for data analysis and automation"
+      },
+      "graphicDesign": {
+        "year": "2018",
+        "institution": "RPIT",
+        "degree": "Computer Graphic Design",
+        "description": "Completed professional training in graphic design"
+      },
+      "bachelorCS": {
+        "year": "2017 - 2021",
+        "institution": "Svay Rieng University",
+        "degree": "Bachelor Degree in Computer Science",
+        "description": "Graduated with comprehensive knowledge in software development, algorithms, and systems"
+      },
+      "highSchool": {
+        "year": "2014 - 2017",
+        "institution": "Hun Sen Svay Chrum High School",
+        "degree": "High School Diploma",
+        "description": "Completed secondary education"
+      },
+      "secondarySchool": {
+        "year": "2011 - 2014",
+        "institution": "Hun Sen Svay Chrum Secondary School",
+        "degree": "Secondary School Certificate",
+        "description": "Completed basic education"
+      }
+    }
+  },
+  "experience": {
+    "title": "My Work Experience",
+    "entries": {
+      "ministryOfHealth": {
+        "company": "Ministry of Health",
+        "location": "Cambodia",
+        "period": "2022 – Present",
+        "roles": [
+          {
+            "title": "Software Developer",
+            "summary": "Developing and maintaining health information systems for national deployment.",
+            "highlights": [
+              "Built responsive web applications using Vue.js and Bootstrap",
+              "Designed and optimized databases with MySQL",
+              "Collaborated with healthcare teams to deliver user-centric solutions"
+            ]
+          }
+        ]
+      },
+      "ecoinsoft": {
+        "company": "Ecoinsoft Company CO.,Ltd",
+        "location": "Cambodia",
+        "period": "2021 – 2022",
+        "roles": [
+          {
+            "title": "Full-stack Developer",
+            "summary": "Developed enterprise software solutions with modern web technologies.",
+            "highlights": [
+              "Implemented front-end features using JavaScript and jQuery",
+              "Built REST APIs with Node.js",
+              "Worked with C# and VB.NET for desktop applications"
+            ]
+          }
+        ]
+      },
+      "prakChantoeun": {
+        "company": "PT Prak Chantoeun CO.,Ltd",
+        "location": "Cambodia",
+        "period": "2021",
+        "roles": [
+          {
+            "title": "Junior Developer",
+            "summary": "Started professional career building business applications.",
+            "highlights": [
+              "Developed web interfaces with HTML, CSS, and Bootstrap",
+              "Managed databases and performed data analysis"
+            ]
+          }
+        ]
+      },
+      "svayRiengUniversity": {
+        "company": "Svay Rieng University",
+        "location": "Svay Rieng",
+        "period": "2017 – 2021",
+        "roles": [
+          {
+            "title": "Volunteer",
+            "summary": "Supported academic and technical activities while pursuing degree.",
+            "highlights": [
+              "Assisted with computer lab management",
+              "Helped students with programming assignments"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "works": {
+    "title": "My Latest Works",
+    "note": "Recent projects and achievements",
+    "viewProject": "View Project",
+    "projectTypes": {
+      "governmentProjects": "Government Projects",
+      "healthcareIT": "Healthcare IT",
+      "ministryOfHealth": "Ministry of Health"
+    },
+    "projects": {
+      "healthSystem": {
+        "title": "Health Information System",
+        "subtitle": "Ministry of Health"
+      },
+      "enterpriseApp": {
+        "title": "Enterprise Application",
+        "subtitle": "Ecoinsoft Company"
+      },
+      "mobileApp": {
+        "title": "Mobile Application",
+        "subtitle": "Flutter Project"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Professional Profile",
+    "quotes": {
+      "technicalExcellence": "Proficient in modern frameworks like Vue.js and Flutter with strong database design skills.",
+      "governmentProjects": "Contributing to national health information systems serving millions of citizens.",
+      "continuousLearning": "Constantly updating skills through courses and hands-on projects in latest technologies."
+    }
+  },
+  "hobbies": {
+    "title": "Hobbies & Interests",
+    "categories": {
+      "continuousLearning": "Continuous Learning",
+      "professionalDevelopment": "Professional Development",
+      "selfImprovement": "Self-improvement"
+    }
+  },
+  "cta": {
+    "heading": "Let's work together on your next project.",
+    "subheading": "Start by",
+    "getInTouch": "Get in touch"
+  },
+  "footer": {
+    "information": "Information",
+    "quickLinks": "Quick Links",
+    "copyright": "© 2025 LONG RATANA. All Rights Reserved",
+    "credits": "Built with Vue.js & Tailwind CSS"
+  },
+  "githubProjects": {
+    "title": "GitHub Projects",
+    "loading": "Loading repositories...",
+    "viewOnGithub": "View on GitHub",
+    "noDescription": "No description available"
+  }
+}

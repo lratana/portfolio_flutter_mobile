@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import '../providers/portfolio_provider.dart';
 import '../models/portfolio_models.dart';
+import '../providers/locale_provider.dart' show AppLocalizations;
 
 class WorksSection extends StatelessWidget {
   final Works works;
@@ -138,7 +139,7 @@ class WorksSection extends StatelessWidget {
             Icon(Icons.image_not_supported, color: Colors.grey[600], size: 48),
             const SizedBox(height: 8),
             Text(
-              'Image not found',
+              AppLocalizations.t(context, 'common.imageNotFound'),
               style: TextStyle(color: Colors.grey[600]),
             ),
           ],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../providers/locale_provider.dart'
+    show AppLocalizations, localeProvider;
 import '../providers/portfolio_provider.dart';
 import '../sections/contact_section.dart';
 import '../sections/education_section.dart';
@@ -16,18 +18,15 @@ class PortfolioHomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final portfolioState = ref.watch(portfolioProvider);
+    final locale = ref.watch(localeProvider);
 
     return Scaffold(
-      // appBar: AppBar(
-      //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      //   title: const Text('My Portfolio'),
-      //   elevation: 0,
-      // ),
-      body: _buildBody(context, ref, portfolioState),
+      body: _buildBody(context, ref, portfolioState, locale),
     );
   }
 
-  Widget _buildBody(BuildContext context, WidgetRef ref, portfolioState) {
+  Widget _buildBody(
+      BuildContext context, WidgetRef ref, portfolioState, Locale locale) {
     // Loading state
     if (portfolioState.isLoading) {
       return const Center(child: CircularProgressIndicator());
@@ -42,7 +41,7 @@ class PortfolioHomePage extends ConsumerWidget {
             const Icon(Icons.error_outline, size: 48, color: Colors.red),
             const SizedBox(height: 16),
             Text(
-              'Error loading portfolio',
+              AppLocalizations.t(context, 'common.errorLoading'),
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 8),
@@ -55,7 +54,7 @@ class PortfolioHomePage extends ConsumerWidget {
               onPressed: () {
                 ref.read(portfolioProvider.notifier).loadPortfolioData();
               },
-              child: const Text('Retry'),
+              child: Text(AppLocalizations.t(context, 'common.retry')),
             ),
           ],
         ),
@@ -64,8 +63,8 @@ class PortfolioHomePage extends ConsumerWidget {
 
     // Empty state
     if (!portfolioState.hasData) {
-      return const Center(
-        child: Text('No portfolio data available'),
+      return Center(
+        child: Text(AppLocalizations.t(context, 'common.noData')),
       );
     }
 
@@ -79,6 +78,29 @@ class PortfolioHomePage extends ConsumerWidget {
             //  title: Text(portfolioState.hero?.name ?? 'My Portfolio'),
             background: HeroSection(hero: portfolioState.hero!),
           ),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8),
+              child: Row(
+                children: [
+                  Icon(Icons.language, color: Colors.white),
+                  TextButton(
+                    onPressed: () {
+                      final nextLocale = locale.languageCode == 'en'
+                          ? const Locale('km')
+                          : const Locale('en');
+                      ref.read(localeProvider.notifier).state = nextLocale;
+                    },
+                    child: Text(
+                      locale.languageCode == 'en' ? 'KH' : 'EN',
+                      style: const TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
         SliverList(
           delegate: SliverChildListDelegate(

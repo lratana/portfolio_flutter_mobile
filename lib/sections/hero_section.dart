@@ -1,6 +1,7 @@
 // Hero Section
 import 'package:flutter/material.dart';
 import 'package:sample_project/models/portfolio_models.dart';
+import '../providers/locale_provider.dart' show AppLocalizations;
 
 class HeroSection extends StatelessWidget {
   final PersonalProfile hero;
@@ -17,11 +18,11 @@ class HeroSection extends StatelessWidget {
           _buildAvatar(),
           const SizedBox(height: 20),
           Text(
-            hero.greeting,
+            AppLocalizations.t(context, 'hero.greeting'),
             style: const TextStyle(fontSize: 16, color: Colors.grey),
           ),
           Text(
-            hero.name,
+            AppLocalizations.t(context, 'name'),
             style: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
@@ -29,7 +30,7 @@ class HeroSection extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            hero.tagline,
+            AppLocalizations.t(context, 'hero.tagline'),
             style: const TextStyle(fontSize: 14, color: Colors.grey),
             textAlign: TextAlign.center,
           ),
@@ -60,7 +61,7 @@ class HeroSection extends StatelessWidget {
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {},
-            child: const Text('Get in Touch'),
+            child: Text(AppLocalizations.t(context, 'cta.getInTouch')),
           ),
         ],
       ),

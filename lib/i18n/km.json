@@ -1,0 +1,231 @@
+{
+  "name": "ឡុង រ័ត្ននា",
+  "nav": {
+    "home": "ទំព័រដើម",
+    "skills": "ជំនាញ",
+    "works": "ការងារ",
+    "education": "ការអប់រំ",
+    "experience": "បទពិសោធន៍",
+    "contact": "ទំនាក់ទំនង"
+  },
+  "common": {
+    "errorLoading": "មានបញ្ហាក្នុងការផ្ទុកទិន្នន័យ",
+    "retry": "សាកល្បងម្ដងទៀត",
+    "noData": "មិនមានទិន្នន័យប្រវត្តិការងារ",
+    "imageNotFound": "រកមិនឃើញ​រូបភាព"
+  },
+  "hero": {
+    "greeting": "សួស្តី ខ្ញុំឈ្មោះ",
+    "tagline": "និស្សិតបញ្ចប់ការសិក្សាផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    "bio": "ជំនាញលើ Vue.js, Flutter និង Node.js ជាមួយបទពិសោធន៍ក្នុងគម្រោងរដ្ឋាភិបាល និងសហគ្រាស។",
+    "sayHello": "ទាក់ទងមកកាន់ខ្ញុំ",
+    "stats": {
+      "yearsExperience": "ឆ្នាំនៃបទពិសោធន៍",
+      "projectsCompleted": "គម្រោងបានបញ្ចប់"
+    }
+  },
+  "services": {
+    "title": "ជំនាញបច្ចេកទេស",
+    "projectsCompleted": "គម្រោងបានបញ្ចប់",
+    "categories": {
+      "technicalExcellence": "ជំនាញបច្ចេកទេសឧត្តម",
+      "fullStackDevelopment": "ការអភិវឌ្ឍន៍ Full-stack",
+      "webMobile": "វេប និងទូរស័ព្ទ"
+    }
+  },
+  "skills": {
+    "title": "ជំនាញកុំព្យូទ័រ",
+    "languages": "ភាសា",
+    "khmer": "ខ្មែរ",
+    "english": "អង់គ្លេស",
+    "excellent": "ល្អបំផុត",
+    "good": "ល្អ",
+    "categories": {
+      "microsoftOffice": "Microsoft Office",
+      "webDesign": "Web Design",
+      "database": "Database",
+      "framework": "Framework",
+      "frontEnd": "Front-end",
+      "backEnd": "Back-end",
+      "programming": "Programming"
+    },
+    "items": {
+      "word": "Word",
+      "excel": "Excel",
+      "powerpoint": "PowerPoint",
+      "access": "Access",
+      "html": "HTML",
+      "css": "CSS",
+      "bootstrap": "Bootstrap",
+      "mysql": "MySQL",
+      "sqlserver": "SQL Server",
+      "flutter": "Flutter",
+      "vuejs": "Vue.js",
+      "javascript": "JavaScript",
+      "jquery": "jQuery",
+      "nodejs": "Node.js",
+      "csharp": "C#",
+      "vbnet": "VB.NET",
+      "java": "Java"
+    }
+  },
+  "education": {
+    "title": "ការអប់រំ និងការបណ្តុះបណ្តាល",
+    "entries": {
+      "advancedExcel": {
+        "year": "ឆ្នាំ ២០២១",
+        "institution": "ការបណ្តុះបណ្តាលវិជ្ជាជីវៈ",
+        "degree": "វគ្គសិក្សា Microsoft Excel កម្រិតខ្ពស់",
+        "description": "បានបញ្ចប់ការបណ្តុះបណ្តាលកម្រិតខ្ពស់ក្នុង Excel សម្រាប់ការវិភាគទិន្នន័យ និងស្វ័យប្រវត្តិកម្ម"
+      },
+      "graphicDesign": {
+        "year": "ឆ្នាំ ២០១៨",
+        "institution": "RPIT",
+        "degree": "ការរចនាក្រាហ្វិកកុំព្យូទ័រ",
+        "description": "បានបញ្ចប់ការបណ្តុះបណ្តាលវិជ្ជាជីវៈក្នុងការរចនាក្រាហ្វិក"
+      },
+      "bachelorCS": {
+        "year": "ឆ្នាំ ២០១៧ - ២០២១",
+        "institution": "សាកលវិទ្យាល័យស្វាយរៀង",
+        "degree": "បរិញ្ញាបត្រផ្នែកវិទ្យាសាស្ត្រកុំព្យូទ័រ",
+        "description": "បានបញ្ចប់ការសិក្សាជាមួយនឹងចំណេះដឹងទូលំទូលាយក្នុងការអភិវឌ្ឍន៍កម្មវិធី ក្បួនដោះស្រាយ និងប្រព័ន្ធ"
+      },
+      "highSchool": {
+        "year": "ឆ្នាំ ២០១៤ - ២០១៧",
+        "institution": "វិទ្យាល័យហ៊ុនសែនស្វាយច្រំ",
+        "degree": "បញ្ញាបត្រមធ្យមសិក្សាទុតិយភូមិ",
+        "description": "បានបញ្ចប់ការអប់រំមធ្យមសិក្សាទុតិយភូមិ"
+      },
+      "secondarySchool": {
+        "year": "ឆ្នាំ ២០១១ - ២០១៤",
+        "institution": "វិទ្យាល័យហ៊ុនសែនស្វាយច្រំ",
+        "degree": "សញ្ញាបត្រមធ្យមសិក្សាបឋមភូមិ",
+        "description": "បានបញ្ចប់ការអប់រំមូលដ្ឋាន"
+      }
+    }
+  },
+  "experience": {
+    "title": "បទពិសោធន៍ការងាររបស់ខ្ញុំ",
+    "entries": {
+      "ministryOfHealth": {
+        "company": "ក្រសួងសុខាភិបាល",
+        "location": "កម្ពុជា",
+        "period": "ឆ្នាំ ២០២២ – បច្ចុប្បន្ន",
+        "roles": [
+          {
+            "title": "អ្នកអភិវឌ្ឍន៍កម្មវិធី",
+            "summary": "អភិវឌ្ឍ និងថែទាំប្រព័ន្ធព័ត៌មានសុខាភិបាលសម្រាប់ការបង្ហាត់ប្រើជាតិ។",
+            "highlights": [
+              "បង្កើតកម្មវិធីវេបឆ្លើយតបដោយប្រើ Vue.js និង Bootstrap",
+              "រចនា និងប្រសិទ្ធភាពមូលដ្ឋានទិន្នន័យដោយប្រើ MySQL",
+              "សហការជាមួយក្រុមសុខាភិបាលដើម្បីផ្តល់ដំណោះស្រាយផ្អែកលើអ្នកប្រើ"
+            ]
+          }
+        ]
+      },
+      "ecoinsoft": {
+        "company": "ក្រុមហ៊ុន Ecoinsoft CO.,Ltd",
+        "location": "កម្ពុជា",
+        "period": "ឆ្នាំ ២០២១ – ២០២២",
+        "roles": [
+          {
+            "title": "អ្នកអភិវឌ្ឍន៍ Full-stack",
+            "summary": "អភិវឌ្ឍដំណោះស្រាយកម្មវិធីសហគ្រាសដោយប្រើបច្ចេកវិទ្យាវេបទំនើប។",
+            "highlights": [
+              "អនុវត្តមុខងារខាងមុខដោយប្រើ JavaScript និង jQuery",
+              "បង្កើត REST API ដោយប្រើ Node.js",
+              "ធ្វើការជាមួយ C# និង VB.NET សម្រាប់កម្មវិធី Desktop"
+            ]
+          }
+        ]
+      },
+      "prakChantoeun": {
+        "company": "ក្រុមហ៊ុន PT Prak Chantoeun CO.,Ltd",
+        "location": "កម្ពុជា",
+        "period": "ឆ្នាំ ២០២១",
+        "roles": [
+          {
+            "title": "អ្នកអភិវឌ្ឍន៍កម្រិត Junior",
+            "summary": "ចាប់ផ្តើមអាជីពវិជ្ជាជីវៈក្នុងការបង្កើតកម្មវិធីអាជីវកម្ម។",
+            "highlights": [
+              "អភិវឌ្ឍផ្ទៃមុខវេបដោយប្រើ HTML, CSS និង Bootstrap",
+              "គ្រប់គ្រងមូលដ្ឋានទិន្នន័យ និងវិភាគទិន្នន័យ"
+            ]
+          }
+        ]
+      },
+      "svayRiengUniversity": {
+        "company": "សាកលវិទ្យាល័យស្វាយរៀង",
+        "location": "ស្វាយរៀង",
+        "period": "ឆ្នាំ ២០១៧ – ២០២១",
+        "roles": [
+          {
+            "title": "អូន្មាន",
+            "summary": "គាំទ្រសកម្មភាពអប់រំ និងបច្ចេកទេស ខណៈដែលកំពុងសិក្សា។",
+            "highlights": [
+              "ជួយគ្រប់គ្រងបន្ទប់កុំព្យូទ័រ",
+              "ជួយសិស្សក្នុងកិច្ចការប្រកបកម្មវិធី"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "works": {
+    "title": "គម្រោងចុងក្រោយរបស់ខ្ញុំ",
+    "note": "គម្រោង និងសមិទ្ធផលថ្មីៗ",
+    "viewProject": "មើលគម្រោង",
+    "projectTypes": {
+      "governmentProjects": "គម្រោងរដ្ឋាភិបាល",
+      "healthcareIT": "បច្ចេកវិទ្យាសុខាភិបាល",
+      "ministryOfHealth": "ក្រសួងសុខាភិបាល"
+    },
+    "projects": {
+      "healthSystem": {
+        "title": "ប្រព័ន្ធព័ត៌មានសុខាភិបាល",
+        "subtitle": "ក្រសួងសុខាភិបាល"
+      },
+      "enterpriseApp": {
+        "title": "កម្មវិធីសហគ្រាស",
+        "subtitle": "ក្រុមហ៊ុន Ecoinsoft"
+      },
+      "mobileApp": {
+        "title": "កម្មវិធីទូរស័ព្ទ",
+        "subtitle": "គម្រោង Flutter"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "ប្រវត្តិរូបវិជ្ជាជីវៈ",
+    "quotes": {
+      "technicalExcellence": "ជំនាញក្នុងការប្រើប្រាស់ framework ទំនើបដូចជា Vue.js និង Flutter ជាមួយនឹងជំនាញរចនាមូលដ្ឋានទិន្នន័យខ្លាំង។",
+      "governmentProjects": "រួមចំណែកដល់ប្រព័ន្ធព័ត៌មានសុខាភិបាលជាតិដែលបម្រើប្រជាពលរដ្ឋរាប់លាននាក់។",
+      "continuousLearning": "ធ្វើបច្ចុប្បន្នភាពជំនាញជាប់លាប់តាមរយៈវគ្គសិក្សា និងគម្រោងអនុវត្តជាក់ស្តែងលើបច្ចេកវិទ្យាថ្មីៗ។"
+    }
+  },
+  "hobbies": {
+    "title": "ចំណូលចិត្ត និងការចាប់អារម្មណ៍",
+    "categories": {
+      "continuousLearning": "ការរៀនសូត្រជាប់លាប់",
+      "professionalDevelopment": "ការអភិវឌ្ឍន៍វិជ្ជាជីវៈ",
+      "selfImprovement": "ការអភិវឌ្ឍន៍ខ្លួនឯង"
+    }
+  },
+  "cta": {
+    "heading": "តោះធ្វើការរួមគ្នាលើគម្រោងបន្ទាប់របស់អ្នក",
+    "subheading": "ចាប់ផ្តើមដោយ",
+    "getInTouch": "ទាក់ទងមកកាន់ខ្ញុំ"
+  },
+  "footer": {
+    "information": "ព័ត៌មាន",
+    "quickLinks": "តំណរហ័ស",
+    "copyright": "© ២០២៥ ឡុង រ័ត្ននា។ រក្សាសិទ្ធិគ្រប់យ៉ាង",
+    "credits": "បង្កើតដោយ Vue.js និង Tailwind CSS"
+  },
+  "githubProjects": {
+    "title": "គម្រោង GitHub",
+    "loading": "កំពុងផ្ទុកឃ្លាំងផ្ទុក...",
+    "viewOnGithub": "មើលលើ GitHub",
+    "noDescription": "មិនមានការពិពណ៌នា"
+  }
+}
