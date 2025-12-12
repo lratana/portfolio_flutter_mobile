@@ -1,5 +1,6 @@
 // Services Section
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../models/portfolio_models.dart';
 
@@ -107,7 +108,7 @@ class ServicesSection extends StatelessWidget {
       );
     }
 
-    return Image.asset(
+    return SvgPicture.asset(
       'assets/$cleanPath',
       fit: BoxFit.contain,
       errorBuilder: (context, error, stackTrace) {

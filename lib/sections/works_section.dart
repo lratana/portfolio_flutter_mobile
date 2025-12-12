@@ -1,6 +1,7 @@
 // Works Section
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import '../providers/portfolio_provider.dart';
 import '../models/portfolio_models.dart';
 
@@ -125,27 +126,24 @@ class WorksSection extends StatelessWidget {
     // Remove leading slash if present
     String cleanPath =
         imagePath.startsWith('/') ? imagePath.substring(1) : imagePath;
-
-    return Image.asset(
+    return SvgPicture.asset(
       'assets/$cleanPath',
       fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          color: Colors.grey[300],
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.image_not_supported,
-                  color: Colors.grey[600], size: 48),
-              const SizedBox(height: 8),
-              Text(
-                'Image not found',
-                style: TextStyle(color: Colors.grey[600]),
-              ),
-            ],
-          ),
-        );
-      },
+      semanticsLabel: 'A descriptive label for accessibility',
+      placeholderBuilder: (context) => Container(
+        color: Colors.grey[300],
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.image_not_supported, color: Colors.grey[600], size: 48),
+            const SizedBox(height: 8),
+            Text(
+              'Image not found',
+              style: TextStyle(color: Colors.grey[600]),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
