@@ -2,7 +2,7 @@
   "site": {
     "brand": {
       "name": "LONG RATANA",
-      "logo": "/images/logo.svg"
+      "logo": "/images/Logo.svg"
     },
     "navigation": [
       { "label": "Skills", "to": "#skills" },
@@ -28,7 +28,7 @@
     "name": "LONG RATANA",
     "tagline": "Full-stack developer building innovative web and mobile solutions.",
     "bio": "Computer Science graduate specializing in Vue.js, Flutter, and Node.js development with experience in government and enterprise projects.",
-    "avatar": "/images/profile.png",
+    "avatar": "/images/Ratana.png",
     "email": "lratana85@gmail.com",
     "yearsExperience": 4,
     "certification": {
@@ -222,7 +222,7 @@
         "id": "health-system",
         "title": "Health Information System",
         "subtitle": "Ministry of Health",
-        "cover": "/images/works/health-system.png",
+        "cover": "/images/works/health-system.svg",
         "grid": "wide",
         "tags": ["Vue.js", "MySQL", "Bootstrap"],
         "url": "#",
@@ -232,7 +232,7 @@
         "id": "enterprise-app",
         "title": "Enterprise Application",
         "subtitle": "Ecoinsoft Company",
-        "cover": "/images/works/enterprise.png",
+        "cover": "/images/works/enterprise.svg",
         "grid": "standard",
         "tags": ["Node.js", "C#", "Database"],
         "url": "#",
@@ -242,7 +242,7 @@
         "id": "mobile-app",
         "title": "Mobile Application",
         "subtitle": "Flutter Project",
-        "cover": "/images/works/mobile.png",
+        "cover": "/images/works/mobile.svg",
         "grid": "standard",
         "tags": ["Flutter", "Mobile"],
         "url": "#",
@@ -257,21 +257,21 @@
         "name": "Technical Excellence",
         "role": "Full-stack Development",
         "company": "Web & Mobile",
-        "avatar": "/images/people/tech.png",
+        "avatar": "/images/people/tech.svg",
         "quote": "Proficient in modern frameworks like Vue.js and Flutter with strong database design skills."
       },
       {
         "name": "Government Projects",
         "role": "Healthcare IT",
         "company": "Ministry of Health",
-        "avatar": "/images/people/gov.png",
+        "avatar": "/images/people/gov.svg",
         "quote": "Contributing to national health information systems serving millions of citizens."
       },
       {
         "name": "Continuous Learning",
         "role": "Professional Development",
         "company": "Self-improvement",
-        "avatar": "/images/people/learn.png",
+        "avatar": "/images/people/learn.svg",
         "quote": "Constantly updating skills through courses and hands-on projects in latest technologies."
       }
     ]
